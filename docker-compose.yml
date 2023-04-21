@@ -3,6 +3,7 @@ version: "3"
 services:
   database:
     image: "mysql:latest"
+
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: mspr-paillote-soleil
