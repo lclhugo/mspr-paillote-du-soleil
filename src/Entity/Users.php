@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UsersRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -23,46 +25,54 @@ class Users
     #[ORM\Column(length: 255)]
     private ?string $email = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $password = null;
+
     #[ORM\Column(type: Types::DATE_IMMUTABLE)]
     private ?\DateTimeImmutable $birthdate = null;
 
     #[ORM\Column]
     private ?\DateTimeImmutable $created_at = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $modified_at = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $password = null;
+    #[ORM\Column]
+    private ?\DateTimeImmutable $modified_at = null;
 
     #[ORM\Column(length: 255)]
     private ?string $role = null;
+
+    #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Articles::class)]
+    private Collection $userArticles;
+
+    public function __construct()
+    {
+        $this->userArticles = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getLastName(): ?string
+    public function getLastname(): ?string
     {
         return $this->lastname;
     }
 
-    public function setLastName(string $lastname): self
+    public function setLastname(string $lastname): self
     {
         $this->lastname = $lastname;
 
         return $this;
     }
 
-    public function getFirstName(): ?string
+    public function getFirstname(): ?string
     {
-        return $this->$irstName;
+        return $this->firstname;
     }
 
-    public function setFirstName(string $FirstName): self
+    public function setFirstname(string $firstname): self
     {
-        $this->FirstName = $FirstName;
+        $this->firstname = $firstname;
 
         return $this;
     }
@@ -75,6 +85,18 @@ class Users
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
 
         return $this;
     }
@@ -103,26 +125,14 @@ class Users
         return $this;
     }
 
-    public function getModifiedAt(): ?\DateTimeInterface
+    public function getModifiedAt(): ?\DateTimeImmutable
     {
         return $this->modified_at;
     }
 
-    public function setModifiedAt(\DateTimeInterface $modified_at): self
+    public function setModifiedAt(\DateTimeImmutable $modified_at): self
     {
         $this->modified_at = $modified_at;
-
-        return $this;
-    }
-
-    public function getPassword(): ?string
-    {
-        return $this->password;
-    }
-
-    public function setPassword(string $password): self
-    {
-        $this->password = $password;
 
         return $this;
     }
@@ -135,6 +145,36 @@ class Users
     public function setRole(string $role): self
     {
         $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Articles>
+     */
+    public function getUserArticles(): Collection
+    {
+        return $this->userArticles;
+    }
+
+    public function addUserArticle(Articles $userArticle): self
+    {
+        if (!$this->userArticles->contains($userArticle)) {
+            $this->userArticles->add($userArticle);
+            $userArticle->setUserId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserArticle(Articles $userArticle): self
+    {
+        if ($this->userArticles->removeElement($userArticle)) {
+            // set the owning side to null (unless already changed)
+            if ($userArticle->getUserId() === $this) {
+                $userArticle->setUserId(null);
+            }
+        }
 
         return $this;
     }
