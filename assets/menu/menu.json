@@ -1,0 +1,107 @@
+{
+  "carte": {
+    "entrees": [
+      {
+        "nom": "Le périgord en salade",
+        "ingredients": "Salade de gésiérs chauds rôtis, cerneaux de noix, maigret fumé, croûtons de provence, sauce auberge et balsamique",
+        "prix": 14.2
+      },
+      {
+        "nom": "Autour du chèvre",
+        "ingredients": "Samoussa et sauce fraîcheur, en navette et confit de figues, noix, en sucette et panée, panna cotta, sorbet de circonstance",
+        "prix": 14.2
+      },
+      {
+        "nom": "Autour du Foie gras mi-cuit et planchée de canard",
+        "ingredients": "Escalope de Foie gras planchée à la fleur de sel du Roussillon, foie gras mi-cuit, confit de figues, panna cotta, nid de roquette, involtini au foie gras, pain d’exception, magret fumé, confit d’oignons, crème glacée pruneaux à l’Armagnac",
+        "prix": 24.9
+      },
+      {
+        "nom": "Noix de St-Jacques gratinées en coquilles",
+        "ingredients": "Rillette baltique et espuma d’agrumes, écume du pêcheur, blinis",
+        "prix": 14.2
+      }
+    ],
+    "plats": [
+      {
+        "nom": "Plancha de Seiches et Gambas",
+        "ingredients": "En persillade, vierge ensoleillée, chorizo, aïoli",
+        "prix": 22.8
+      },
+      {
+        "nom": "Coquilles St-Jacques fraîches braisées",
+        "ingredients": "En persillade, vierge ensoleillée, aïoli",
+        "prix": 22.8
+      },
+      {
+        "nom": "Plancha de Cochon Ibérique «Abanico»",
+        "ingredients": "Viande d’exception, pièce des plus savoureuse du cochon ibérique (nourri au glands)",
+        "prix": 22.8
+      },
+      {
+        "nom": "Magret de Canard grillé",
+        "ingredients": "Entier, sauce au Bleu d’Auvergne",
+        "prix": 25.9
+      }
+    ],
+    "desserts": [
+      {
+        "nom": "Mangueline",
+        "ingredients": "Sorbet coco, ananas, mangue, coulis de fraises fraîches, crème fouettée, pralins",
+        "prix": 9
+      },
+      {
+        "nom": "Dame Rose",
+        "ingredients": "2 b. glace vanille, 1 b. glace fraise, coulis de fraises fraîches, crème fouettée, pralins",
+        "prix": 9
+      },
+      {
+        "nom": "Colonel",
+        "ingredients": "3 b. sorbet citron, vodka, petit espuma Virgin Mojito",
+        "prix": 9
+      },
+      {
+        "nom": "Dame Blanche",
+        "ingredients": "3 b. glace vanille, chocolat chaud, crème fouettée, coulis de chocolat, perles croustillantes",
+        "prix": 9
+      }
+    ],
+    "boissons": {
+      "eaux": [
+        { "nom": "Perrier", "prix": 3.6 },
+        { "nom": "Naturelle", "prix": 3.9 }
+      ],
+      "boissons chaudes": [
+        { "nom": "café", "prix": 2.1 },
+        { "nom": "chocolat chaud", "prix": 3.6 },
+        { "nom": "thé", "prix": 3.6 }
+      ],
+      "alcools": [
+        {
+          "nom": "San Miguel",
+          "ingredients": "Bière blonde espagnole très désaltérante aux saveurs de malt, houblon et caramel, peu d’amertume",
+          "quantite": [
+            { "qte": 25, "prix": 3.6 },
+            { "qte": 50, "prix": 6.9 }
+          ]
+        },
+        {
+          "nom": "Monaco",
+          "ingredients": "San Miguel, Limonade, grenadine",
+          "quantite": [
+            { "qte": 25, "prix": 3.6 },
+            { "qte": 50, "prix": 6.9 }
+          ]
+        },
+        {
+          "nom": "Picon",
+          "ingredients": "San Miguel, Picon",
+          "quantite": [
+            { "qte": 25, "prix": 4.8 },
+            { "qte": 50, "prix": 8 }
+          ]
+        }
+      ]
+    }
+  }
+}

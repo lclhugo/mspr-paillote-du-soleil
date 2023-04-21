@@ -50,14 +50,14 @@ class Users
 
     public function setLastName(string $lastname): self
     {
-        $this->lastname = lastname;
+        $this->lastname = $lastname;
 
         return $this;
     }
 
     public function getFirstName(): ?string
     {
-        return $this->FirstName;
+        return $this->$irstName;
     }
 
     public function setFirstName(string $FirstName): self
