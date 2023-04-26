@@ -1,5 +1,38 @@
 h1 {
   color: red;
+  background-color: black;
+}
+
+body {
+  background-color: #F0E2D5;
+}
+
+.container {
+  display: flex;
+}
+
+.container-activities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-activities-description {
+  justify-content: left;
+  width: 40%;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+p.container-activities-description {
+  justify-self: flex-start;
+}
+
+.container-activities img {
+  width: 80vw;
+  height: 20vh;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
