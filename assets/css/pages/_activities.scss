@@ -1,3 +1,11 @@
+@use "../base/variables";
+
+h1 {
+    font-family: variables.$miracle-font;
+}
+p {
+    font-family: variables.$helvetica-font;
+}
 body {
     background-color: #F0E2D5;
 }
