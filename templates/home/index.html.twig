@@ -1,12 +1,53 @@
-{% extends 'base.html.twig' %} {% block title %}La Paillote du Soleil{% endblock
+{% extends 'base.html.twig' %} {% block title %}La Paillote Du Soleil{% endblock
 %} {% block body %}
 
 <main>
   <section class="hero-section">
     <div class="hero-video-container">
       <video autoplay muted loop>
-        <source src="{{ asset('images/hero_v2.webm') }}" type="video/webm" />
+        <source src="{{ asset('images/hero_v4.webm') }}" type="video/webm" />
       </video>
+      <div class="hero-text">
+        <h1>Bienvenue à la Paillote Du Soleil</h1>
+        <h2>Restaurant - Bar - Plage privée - Évènements</h2>
+      </div>
+    </div>
+  </section>
+  <section class="presentation">
+    <article class="left-content">
+      <img
+        src="{{ asset('images/paillote.webp') }}"
+        alt="photo de la Paillote Du Soleil"
+      />
+    </article>
+    <article class="right-content">
+      <h3 class="presentation-title">La Paillote Du Soleil</h3>
+      <br />
+      <p>
+        <strong>La Paillote Du Soleil</strong> à Valras-Plage, ouvert de Mars à
+        Octobre et situé aux portes de Montpellier (34, Hérault) offre une vue
+        imprenable sur la Méditerranée.
+      </p>
+      <br />
+      <p>
+        Située entre Carnon et Villeneuve les Maguelone, connue de tous depuis
+        des générations, La Paillote Du Soleil est devenue au fil du temps une
+        référence en termes de confort et de qualité. Que l’on y vienne en
+        couple ou en famille, l’équipe veille au calme et au bien être de
+        chacun. La Paillote Du Soleil a conservé l’esprit d’une plage familiale.
+      </p>
+      <br />
+      <p>Découvrez notre <a href="#" class="cta-btn">restaurant</a></p>
+    </article>
+  </section>
+  <section class="proposals">
+    <div class="card"><p class="card__text">Restaurant</p></div>
+    <div class="card">
+      <p class="card__text">Evènements</p>
+    </div>
+    <div class="card">
+      <p class="card__text">Plage privée</p>
+      Plage privée
     </div>
   </section>
 </main>
