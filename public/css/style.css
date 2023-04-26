@@ -4,12 +4,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Miracle";
-  src: url("../fonts/Miracle.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
 * {
   margin: 0;
   padding: 0;
@@ -21,11 +15,52 @@
 
 a, a:visited, a:hover {
   text-decoration: none;
-  color: initial;
+  color: inherit;
 }
 
 nav {
-  background-color: yellow;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.632);
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  gap: 1rem;
+  color: white;
+}
+nav ul a:hover {
+  text-decoration: underline;
+}
+
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+}
+.hero-section .hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-section .hero-video-container video {
+  height: 100%;
+  width: 100vw;
+  object-fit: cover;
+}
+
+footer div {
+  text-align: center;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

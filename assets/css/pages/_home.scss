@@ -1,3 +1,54 @@
 nav {
-    background-color: yellow
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.632);
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+        gap: 1rem;
+
+        color: white;
+
+        & a:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+.hero-section {
+
+    min-height: 100vh;
+    position: relative;
+    
+    .hero-video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+}
+
+.hero-video-container video {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+}
+
+}
+
+footer {
+    div {
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
 }
