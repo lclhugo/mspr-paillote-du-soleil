@@ -10,7 +10,7 @@ services:
       MYSQL_USER: mspr-paillote-soleil
       MYSQL_PASSWORD: dev
     ports:
-      - "3306:3306"
+      - "4306:3306"
     volumes:
       - database_data:/var/lib/mysql
   phpmyadmin:
