@@ -28,6 +28,104 @@ a, a:visited, a:hover {
   color: inherit;
 }
 
+nav {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.632);
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  color: white;
+}
+nav a {
+  font-family: "Miracle", sans-serif;
+}
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+nav ul a:hover {
+  text-decoration: underline;
+}
+
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+}
+.hero-section .hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-section .hero-video-container .hero-text {
+  position: absolute;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.639);
+  letter-spacing: 2px;
+}
+.hero-section .hero-video-container .hero-text h1, .hero-section .hero-video-container .hero-text h2 {
+  font-family: "Miracle", sans-serif;
+}
+.hero-section .hero-video-container .hero-text h2 {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.hero-section .hero-video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.presentation {
+  display: flex;
+  margin: 2rem 4rem;
+}
+.presentation .left-content {
+  height: 500px;
+}
+.presentation .left-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.presentation .right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+  margin-left: 0.5rem;
+}
+.presentation .right-content h3 {
+  font-family: "Miracle", sans-serif;
+  font-size: 3rem;
+  position: relative;
+  margin-left: -3rem;
+  margin-top: -3rem;
+}
+.presentation .cta-btn {
+  font-weight: 700;
+}
+
+footer div {
+  text-align: center;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
 h1 {
   font-family: "Miracle", sans-serif;
 }
