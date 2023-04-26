@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset('images/favicon.ico') }}">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        {% include 'partials/navbar.html.twig' %}
+
+        {% block body %}Activities{% endblock %}
+
+        {% include 'partials/footer.html.twig' %}
+
+    <script src="{{ asset('js/script.js') }}"></script>
+    </body>
+</html>
