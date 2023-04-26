@@ -114,7 +114,50 @@ nav ul a:hover {
   margin-top: -3rem;
 }
 .presentation .cta-btn {
-  font-weight: 700;
+  font-family: "Miracle", sans-serif;
+  display: inline;
+  font-weight: 800;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: #5DA9E9;
+  width: fit-content;
+  padding: 1rem 2rem;
+  transition: filter 300ms ease-in-out;
+}
+.presentation .cta-btn:hover {
+  filter: sepia(1);
+}
+
+.proposals {
+  display: flex;
+  margin: 2rem 4rem;
+  gap: 1.5rem;
+}
+.proposals .card {
+  flex: 1;
+  position: relative;
+}
+.proposals .card .blur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.413);
+}
+.proposals .card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.proposals .card .card__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 
 footer div {

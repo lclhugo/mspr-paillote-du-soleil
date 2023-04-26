@@ -37,17 +37,36 @@
         chacun. La Paillote Du Soleil a conservé l’esprit d’une plage familiale.
       </p>
       <br />
-      <p>Découvrez notre <a href="#" class="cta-btn">restaurant</a></p>
+      <a href="#" class="cta-btn">Découvrez notre restaurant</a>
     </article>
   </section>
   <section class="proposals">
-    <div class="card"><p class="card__text">Restaurant</p></div>
     <div class="card">
-      <p class="card__text">Evènements</p>
+      <a href="#">
+        <div class="blur"></div>
+        <img src="{{ asset('images/proposal__food.jpg') }}" alt="Restaurant" />
+        <p class="card__text">Restaurant</p>
+      </a>
     </div>
     <div class="card">
-      <p class="card__text">Plage privée</p>
-      Plage privée
+      <a href="#">
+        <div class="blur"></div>
+        <img
+          src="{{ asset('images/proposal__restaurant.jpg') }}"
+          alt="Evènements"
+        />
+        <p class="card__text">Évènements</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="#">
+        <div class="blur"></div>
+        <img
+          src="{{ asset('images/proposal__beach.jpg') }}"
+          alt="Plage privée"
+        />
+        <p class="card__text">Plage privée</p>
+      </a>
     </div>
   </section>
 </main>
