@@ -8,7 +8,19 @@ nav {
     display: flex;
     padding: 1rem 2rem;
     justify-content: space-between;
+    align-items: center;
     color: white;
+    font-size: 1.3rem;
+
+    .logo {
+        max-width:30px;
+
+        img {
+            width: 100%;
+            color: white;
+            fill: white;
+        }
+    }
 
     a {
     font-family: variables.$miracle-font;
@@ -86,13 +98,14 @@ nav {
         justify-content: center;
         max-width: 50%;
         margin-left: .5rem;
+        padding-left: 1rem;
         
         h3 {
             font-family: variables.$miracle-font;
             font-size: 3rem;
             position: relative;
-            margin-left: -3rem;
-            margin-top: -3rem;
+            left: -10%;
+            text-shadow: 0 0 3px white
         }
     }
     .cta-btn {
@@ -101,14 +114,76 @@ nav {
         font-weight: 800;
         border: 1px solid gray;
         border-radius: 10px;
-        background-color: variables.$light-blue;
+        background-color: variables.$blue-green;
+        color: white;
         width: fit-content;
         padding:1rem 2rem;
-        transition: filter 300ms ease-in-out
+        transition: background-color 300ms ease-in-out
     }
 
     .cta-btn:hover {
-        filter:sepia(1);
+        background-color: variables.$light-green;
+    }
+}
+
+
+
+ .second {
+    .left-content {
+        order: 2
+    }
+    .right-content {
+        order: 1;
+        padding-left: 0;
+        padding-right: 1rem;
+        position: relative;
+
+        .cta-btn {
+            align-self: flex-end;
+        }
+
+        .presentation-title {
+        position: relative;
+           left: 30%;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .presentation {
+        flex-direction: column;
+        margin: 1rem 2rem;
+
+        .right-content {
+            max-width: 100%;
+            .presentation-title {
+                left: 0;
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            .cta-btn {
+                align-self: center;
+            }
+        }
+
+        .left-content {
+            height: initial;
+
+
+            img {
+                height: initial;
+            }
+        }
+    }
+
+    .second {
+        .left-content {
+            order: 1;
+        }
+        .right-content {
+            order: 2;
+        }
     }
 }
 
@@ -148,15 +223,36 @@ nav {
     }
 }
 
+.before-footer {
+    width: 100%;
+    height: 3rem;
+    background: rgb(240,226,213);
+background: linear-gradient(180deg, rgba(240,226,213,1) 0%, rgba(199,192,182,1) 50%, variables.$light-green 100%);
+}
 
 footer {
+  background-color: variables.$light-green;
+  color: variables.$blue-green;
+    padding: 1rem 2rem;
     div {
         text-align: center;
     }
     
+    h3 {
+margin-bottom: 1rem;
+    }
+
     ul {
         display: flex;
         justify-content: center;
         gap: 1rem;
+    }
+
+    .fa-brands {
+        font-size: 2rem;
+
+        &:hover {
+            color: #9accd7;
+        }
     }
 }

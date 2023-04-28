@@ -36,7 +36,17 @@ nav {
   display: flex;
   padding: 1rem 2rem;
   justify-content: space-between;
+  align-items: center;
   color: white;
+  font-size: 1.3rem;
+}
+nav .logo {
+  max-width: 30px;
+}
+nav .logo img {
+  width: 100%;
+  color: white;
+  fill: white;
 }
 nav a {
   font-family: "Miracle", sans-serif;
@@ -105,13 +115,14 @@ nav ul a:hover {
   justify-content: center;
   max-width: 50%;
   margin-left: 0.5rem;
+  padding-left: 1rem;
 }
 .presentation .right-content h3 {
   font-family: "Miracle", sans-serif;
   font-size: 3rem;
   position: relative;
-  margin-left: -3rem;
-  margin-top: -3rem;
+  left: -10%;
+  text-shadow: 0 0 3px white;
 }
 .presentation .cta-btn {
   font-family: "Miracle", sans-serif;
@@ -119,15 +130,62 @@ nav ul a:hover {
   font-weight: 800;
   border: 1px solid gray;
   border-radius: 10px;
-  background-color: #5DA9E9;
+  background-color: #225560;
+  color: white;
   width: fit-content;
   padding: 1rem 2rem;
-  transition: filter 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 .presentation .cta-btn:hover {
-  filter: sepia(1);
+  background-color: #819f6f;
 }
 
+.second .left-content {
+  order: 2;
+}
+.second .right-content {
+  order: 1;
+  padding-left: 0;
+  padding-right: 1rem;
+  position: relative;
+}
+.second .right-content .cta-btn {
+  align-self: flex-end;
+}
+.second .right-content .presentation-title {
+  position: relative;
+  left: 30%;
+}
+
+@media (max-width: 650px) {
+  .presentation {
+    flex-direction: column;
+    margin: 1rem 2rem;
+  }
+  .presentation .right-content {
+    max-width: 100%;
+  }
+  .presentation .right-content .presentation-title {
+    left: 0;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .presentation .right-content .cta-btn {
+    align-self: center;
+  }
+  .presentation .left-content {
+    height: initial;
+  }
+  .presentation .left-content img {
+    height: initial;
+  }
+  .second .left-content {
+    order: 1;
+  }
+  .second .right-content {
+    order: 2;
+  }
+}
 .proposals {
   display: flex;
   margin: 2rem 4rem;
@@ -160,13 +218,34 @@ nav ul a:hover {
   font-size: 1.5rem;
 }
 
+.before-footer {
+  width: 100%;
+  height: 3rem;
+  background: rgb(240, 226, 213);
+  background: linear-gradient(180deg, rgb(240, 226, 213) 0%, rgb(199, 192, 182) 50%, #819f6f 100%);
+}
+
+footer {
+  background-color: #819f6f;
+  color: #225560;
+  padding: 1rem 2rem;
+}
 footer div {
   text-align: center;
+}
+footer h3 {
+  margin-bottom: 1rem;
 }
 footer ul {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+footer .fa-brands {
+  font-size: 2rem;
+}
+footer .fa-brands:hover {
+  color: #9accd7;
 }
 
 /*# sourceMappingURL=style.css.map */
