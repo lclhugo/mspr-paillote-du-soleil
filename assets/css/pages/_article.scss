@@ -82,3 +82,33 @@
     margin: 1rem auto;
   }
 }
+
+.edit-article {
+  width: 50%;
+  margin: 0 auto 1rem;
+  h1 {
+    text-align: center;
+  }
+
+  #article_title,
+  #article_content,
+  #article_image {
+    width: 100%;
+    background-color: white;
+    margin-top: 10px;
+    // border: solid;
+    // border-width: 2px;
+    // border-color: #225560;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+  }
+
+  #contact_submit {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .mb {
+    margin: 0.5rem 0;
+  }
+}

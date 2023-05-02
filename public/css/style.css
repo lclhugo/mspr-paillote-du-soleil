@@ -374,4 +374,28 @@ p.container-activities-description {
   margin: 1rem auto;
 }
 
+.edit-article {
+  width: 50%;
+  margin: 0 auto 1rem;
+}
+.edit-article h1 {
+  text-align: center;
+}
+.edit-article #article_title,
+.edit-article #article_content,
+.edit-article #article_image {
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+.edit-article #contact_submit {
+  width: 100%;
+  margin-top: 10px;
+}
+.edit-article .mb {
+  margin: 0.5rem 0;
+}
+
 /*# sourceMappingURL=style.css.map */
