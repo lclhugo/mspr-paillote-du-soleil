@@ -299,20 +299,19 @@ li:hover {
   }
 }
 
-.before-footer {
-  width: 100%;
-  height: 3rem;
-  background: rgb(240, 226, 213);
-  background: linear-gradient(
-    180deg,
-    rgba(240, 226, 213, 1) 0%,
-    rgba(199, 192, 182, 1) 50%,
-    variables.$light-green 100%
-  );
-}
+// .before-footer {
+//   width: 100%;
+//   height: 3rem;
+//   background: rgb(240, 226, 213);
+//   background: linear-gradient(
+//     180deg,
+//     rgba(240, 226, 213, 1) 0%,
+//     rgba(199, 192, 182, 1) 50%,
+//     variables.$light-green 100%
+//   );
+// }
 
 footer {
-  display: flex;
   background-color: variables.$light-green;
   color: variables.$blue-green;
   padding: 1rem 2rem;
