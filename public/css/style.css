@@ -294,4 +294,49 @@ p.container-activities-description {
   border-radius: 5px;
 }
 
+#contact_name {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 10px;
+  border: solid;
+  border-width: 2px;
+  border-color: #225560;
+  border-radius: 4px;
+}
+
+#contact_email {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 10px;
+  border: solid;
+  border-width: 2px;
+  border-color: #225560;
+  border-radius: 4px;
+}
+
+#contact_subject {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 10px;
+  border: solid;
+  border-width: 2px;
+  border-color: #225560;
+  border-radius: 4px;
+}
+
+#contact_message {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 10px;
+  border: solid;
+  border-width: 2px;
+  border-color: #225560;
+  border-radius: 4px;
+}
+
+#contact_submit {
+  width: 100%;
+  margin-top: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
