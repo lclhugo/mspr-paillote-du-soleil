@@ -3,10 +3,12 @@
 namespace App\Entity;
 
 use App\Repository\ArticleRepository;
+use DateTimeImmutable;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Article
 {
     #[ORM\Id]
@@ -74,12 +76,10 @@ class Article
     {
         return $this->updatedAt;
     }
-
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    #[ORM\PrePersist]
+    public function creation()
     {
-        $this->updatedAt = $updatedAt;
-
-        return $this;
+        $this->createdAt = new DateTimeImmutable();
     }
 
     public function getImage(): ?string
