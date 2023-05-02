@@ -1,0 +1,261 @@
+@use "../base/variables";
+
+nav {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.632);
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 1.3rem;
+
+  .logo {
+    max-width: 30px;
+
+    img {
+      width: 100%;
+      color: white;
+      fill: white;
+    }
+  }
+
+  a {
+    font-family: variables.$miracle-font;
+  }
+  ul {
+    display: flex;
+    gap: 1rem;
+
+    & a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+
+  .hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .hero-text {
+      position: absolute;
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.639);
+      letter-spacing: 2px;
+
+      h1,
+      h2 {
+        font-family: variables.$miracle-font;
+      }
+
+      h2 {
+        margin-top: 0.4rem;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .hero-video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.presentation {
+  display: flex;
+  margin: 2rem 4rem;
+
+  .left-content {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    height: 500px;
+  }
+
+  .right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    margin-left: 0.5rem;
+    padding-left: 1rem;
+
+    h3 {
+      font-family: variables.$miracle-font;
+      font-size: 3rem;
+      position: relative;
+      left: -10%;
+      text-shadow: 0 0 3px white;
+    }
+  }
+  .cta-btn {
+    font-family: variables.$miracle-font;
+    display: inline;
+    font-weight: 800;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: variables.$blue-green;
+    color: white;
+    width: fit-content;
+    padding: 1rem 2rem;
+    transition: background-color 300ms ease-in-out;
+  }
+
+  .cta-btn:hover {
+    background-color: variables.$light-green;
+  }
+}
+
+.second {
+  .left-content {
+    order: 2;
+  }
+  .right-content {
+    order: 1;
+    padding-left: 0;
+    padding-right: 1rem;
+    position: relative;
+
+    .cta-btn {
+      align-self: flex-end;
+    }
+
+    .presentation-title {
+      position: relative;
+      left: 30%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .presentation {
+    flex-direction: column;
+    margin: 1rem 2rem;
+
+    .right-content {
+      max-width: 100%;
+      .presentation-title {
+        left: 0;
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .cta-btn {
+        align-self: center;
+      }
+    }
+
+    .left-content {
+      height: initial;
+
+      img {
+        height: initial;
+      }
+    }
+  }
+
+  .second {
+    .left-content {
+      order: 1;
+    }
+    .right-content {
+      order: 2;
+    }
+  }
+}
+
+.proposals {
+  display: flex;
+  margin: 2rem 4rem;
+  gap: 1.5rem;
+
+  .card {
+    flex: 1;
+    position: relative;
+
+    .blur {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.413);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .card__text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.before-footer {
+  width: 100%;
+  height: 3rem;
+  background: rgb(240, 226, 213);
+  background: linear-gradient(
+    180deg,
+    rgba(240, 226, 213, 1) 0%,
+    rgba(199, 192, 182, 1) 50%,
+    variables.$light-green 100%
+  );
+}
+
+footer {
+  display: flex;
+  background-color: variables.$light-green;
+  color: variables.$blue-green;
+  padding: 1rem 2rem;
+  div {
+    text-align: center;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .fa-brands {
+    font-size: 2rem;
+
+    &:hover {
+      color: #9accd7;
+    }
+  }
+}
