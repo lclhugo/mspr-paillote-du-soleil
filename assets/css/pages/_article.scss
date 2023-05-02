@@ -1,0 +1,53 @@
+@use "../base/variables";
+
+.cards {
+  display: flex !important;
+  margin-top: 0.5rem !important;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  .article__card {
+    position: relative;
+    max-width: 400px;
+    .article__card-img {
+      max-width: 400px;
+      img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .card__title {
+      padding: 1rem 2rem;
+      position: absolute;
+      bottom: 16.4%;
+      width: 100%;
+      overflow: hidden;
+      background-color: rgba(20, 19, 19, 0.781);
+      color: white;
+    }
+  }
+}
+
+.margin-bottom {
+  margin: 1rem 0;
+}
+
+.btn_crud {
+  font-family: variables.$miracle-font;
+  display: inline-block;
+  font-weight: 800;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: variables.$blue-green;
+  color: white !important;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  transition: background-color 300ms ease-in-out;
+}
+
+.cta-btn:hover {
+  background-color: variables.$light-green;
+}
