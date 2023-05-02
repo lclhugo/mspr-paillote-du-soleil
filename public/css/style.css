@@ -28,6 +28,10 @@ a, a:visited, a:hover {
   color: inherit;
 }
 
+.main-container {
+  padding-top: 10%;
+}
+
 nav {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.632);
@@ -83,7 +87,8 @@ nav ul a:hover {
   background-color: rgba(0, 0, 0, 0.639);
   letter-spacing: 2px;
 }
-.hero-section .hero-video-container .hero-text h1, .hero-section .hero-video-container .hero-text h2 {
+.hero-section .hero-video-container .hero-text h1,
+.hero-section .hero-video-container .hero-text h2 {
   font-family: "Miracle", sans-serif;
 }
 .hero-section .hero-video-container .hero-text h2 {
@@ -226,6 +231,7 @@ nav ul a:hover {
 }
 
 footer {
+  display: flex;
   background-color: #819f6f;
   color: #225560;
   padding: 1rem 2rem;
