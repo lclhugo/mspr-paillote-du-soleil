@@ -35,6 +35,10 @@ nav {
   }
   .dropdown-menu.active {
     display: block;
+    position: absolute;
+    top: 70px;
+    background-color:rgba(0, 0, 0, 0.632);
+    width: 180px;
   }
   .nav-menu {
     display: flex;
