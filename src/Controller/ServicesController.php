@@ -15,4 +15,12 @@ class ServicesController extends AbstractController
             'controller_name' => 'ServicesController',
         ]);
     }
+    #[Route('/services/activities', name: 'app_activities')]
+    public function activities(): Response
+    {
+        return $this->render('services/activities.html.twig', [
+            'controller_name' => 'ServicesController',
+        ]);
+    }
+
 }
