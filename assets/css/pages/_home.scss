@@ -25,13 +25,23 @@ nav {
   a {
     font-family: variables.$miracle-font;
   }
-  ul {
-    display: flex;
+  ul.dropdown-menu {
+    display: none;
     gap: 1rem;
 
     & a:hover {
       text-decoration: underline;
     }
+  }
+  .dropdown-menu.active {
+    display: block;
+  }
+  .nav-menu {
+    display: flex;
+
+  }
+  .dropdown {
+    padding: 0 20px;
   }
 }
 

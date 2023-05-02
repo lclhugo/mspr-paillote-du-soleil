@@ -1,13 +1,45 @@
 <header>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.dropdown-toggle').click(function(e) {
+      e.preventDefault();
+      $(this).children().toggleClass('active');
+      console.log("hello");
+    });
+  });
+</script>
   <nav>
     <div class="logo">
       <img src="{{ asset("images/paillotte.svg") }}" alt="Logo"/>
     </div>
-    <ul>
-      <li><a href="#">Restaurant</a></li>
-      <li><a href="#">Actualités</a></li>
-      <li><a href="#">Services</a></li>
-    </ul>
+     <div class="nav-menu">
+      <div class="dropdown">
+        <span href="#" class="dropdown-toggle">Restaurant
+        <ul class="dropdown-menu">
+          <li><a href="#">Carte </a></li>
+          <li><a href="#">Traiteur</a></li>
+        </ul>
+        </span>
+        </div>
+        <div class="dropdown">
+        <span href="#" class="dropdown-toggle">Nos actualités
+        <ul class="dropdown-menu">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Presse partenaire</a></li>
+        </ul>
+        </span>
+        </div>
+        <div class="dropdown">
+        <span href="#" class="dropdown-toggle">Services
+        <ul class="dropdown-menu">
+          <li><a href="#">Plage privée</a></li>
+          <li><a href="#">Evènements</a></li>
+          <li><a href="#">Activités touristiques</a></li>
+        </ul>
+        </span>
+        </div>
+        </div>
     <a href="#" class="book" id="desktop-mobile">
       Réservez <i class="fa-regular fa-calendar-check"></i>
     </a>
