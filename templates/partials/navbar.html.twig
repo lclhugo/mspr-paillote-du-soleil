@@ -1,15 +1,89 @@
 <header>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    const heroTextInitialPosition = $('.hero-text').css('position');
+    $('.dropdown-toggle').click(function(e) {
+      $(this).children().toggleClass('active');
+    });
+  
+    
+    $('.burger-button').click(function(e) {
+      $('.menu-mobile').toggleClass('active');
+      console.log("hello");
+        if ($('.menu-mobile').hasClass('active')) {
+    // Définir la position relative lorsque le menu est ouvert
+    $('.hero-text').css('position', 'relative');
+  } else {
+    // Réappliquer la position initiale lorsque le menu est fermé
+    $('.hero-text').css('position', heroTextInitialPosition);
+  }
+  });
+
+  $('.closing-x').click(()=> {
+    $('.menu-mobile').toggleClass('active');
+     if ($('.menu-mobile').hasClass('active')) {
+    // Définir la position relative lorsque le menu est ouvert
+    $('.hero-text').css('position', 'relative');
+  } else {
+    // Réappliquer la position initiale lorsque le menu est fermé
+    $('.hero-text').css('position', heroTextInitialPosition);
+  }
+    });
+  });
+</script>
   <nav>
     <div class="logo">
       <img src="{{ asset("images/paillotte.svg") }}" alt="Logo"/>
     </div>
-    <ul>
-      <li><a href="#">Restaurant</a></li>
-      <li><a href="#">Actualités</a></li>
-      <li><a href="#">Services</a></li>
-    </ul>
+     <div class="nav-menu">
+      <div class="dropdown">
+        <span href="#" class="dropdown-toggle" id="dropdown-restaurant">Restaurant
+        <ul class="dropdown-menu">
+          <li><a href="#">Carte </a></li>
+          <li><a href="#">Traiteur</a></li>
+        </ul>
+        </span>
+        </div>
+        <div class="dropdown">
+        <span href="#" class="dropdown-toggle">Nos actualités
+        <ul class="dropdown-menu">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Presse partenaire</a></li>
+        </ul>
+        </span>
+        </div>
+        <div class="dropdown">
+        <span href="#" class="dropdown-toggle">Services
+        <ul class="dropdown-menu">
+          <li><a href="#">Plage privée</a></li>
+          <li><a href="#">Evènements</a></li>
+          <li><a href="{{ path('app_activities') }}">Activités touristiques</a></li>
+        </ul>
+        </span>
+        </div>
+        </div>
     <a href="#" class="book" id="desktop-mobile">
       Réservez <i class="fa-regular fa-calendar-check"></i>
     </a>
+    <div class="nav-menu-mobile">
+    <i class="fa-solid fa-bars burger-button"></i>
+<div class="menu-mobile">
+<div class="closing-x-div"> <span class="closing-x"> X </span></div>
+<ul>
+
+ <h2 class="menu-titre">Restaurant</h2>
+ <li class="menu-sous-titre">Carte</li>
+ <li class="menu-sous-titre">Traiteur</li>
+  <h2 class="menu-titre">Nos actus</h2>
+  <li class="menu-sous-titre">Blog</li>
+ <li class="menu-sous-titre">Presse - partenaire</li>
+   <h2 class="menu-titre">Services</h2>
+   <li class="menu-sous-titre">Plage Privée</li>
+ <li class="menu-sous-titre">Evènements</li>
+ <li class="menu-sous-titre">Activités touristiques</li>
+</ul>
+</div>
+     </div>
   </nav>
 </header>
