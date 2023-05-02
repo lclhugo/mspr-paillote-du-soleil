@@ -66,8 +66,8 @@ nav .dropdown-menu.active {
   display: block;
   position: absolute;
   top: 92px;
+  z-index: 4;
   background-color: rgba(0, 0, 0, 0.632);
-  width: 180px;
 }
 nav .dropdown-menu.active li {
   padding: 20px;
@@ -82,6 +82,11 @@ nav .dropdown {
 .nav-menu-mobile {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 500px) {
+  .nav-menu-mobile {
+    display: none;
+  }
 }
 
 .menu-mobile {

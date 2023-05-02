@@ -5,8 +5,16 @@
     const heroTextInitialPosition = $('.hero-text').css('position');
     $('.dropdown-toggle').click(function(e) {
       $(this).children().toggleClass('active');
+       $('.hero-text').css('position', 'relative');
+       if ($(this).children().hasClass('active')) {
+    $('.hero-text').css('position', 'relative');
+  } else {
+    $('.hero-text').css('position', 'absolute');
+  }
       console.log("hello");
     });
+  
+    
     $('.burger-button').click(function(e) {
       $('.menu-mobile').toggleClass('active');
       console.log("hello");
@@ -18,6 +26,7 @@
     $('.hero-text').css('position', heroTextInitialPosition);
   }
   });
+
   $('.closing-x').click(()=> {
     $('.menu-mobile').toggleClass('active');
     });
@@ -29,7 +38,7 @@
     </div>
      <div class="nav-menu">
       <div class="dropdown">
-        <span href="#" class="dropdown-toggle">Restaurant
+        <span href="#" class="dropdown-toggle" id="dropdown-restaurant">Restaurant
         <ul class="dropdown-menu">
           <li><a href="#">Carte </a></li>
           <li><a href="#">Traiteur</a></li>
@@ -58,7 +67,7 @@
       Réservez <i class="fa-regular fa-calendar-check"></i>
     </a>
     <div class="nav-menu-mobile">
-    <img src="{{ asset("images/burger_icon.svg") }}" class="burger-button" alt="burger-menu"/>
+    <i class="fa-solid fa-bars burger-button"></i>
 <div class="menu-mobile">
 <div class="closing-x-div"> <span class="closing-x"> X </span></div>
 <ul>

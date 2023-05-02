@@ -37,8 +37,8 @@ nav {
     display: block;
     position: absolute;
     top: 92px;
-    background-color:rgba(0, 0, 0, 0.632);
-    width: 180px;
+    z-index: 4;
+    background-color:rgba(0, 0, 0, 0.632); 
     li {
       padding: 20px;
     }
@@ -55,6 +55,9 @@ nav {
 .nav-menu-mobile {
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 500px){
+    display: none;
+  }
 }
   .menu-mobile {
    display: none;
