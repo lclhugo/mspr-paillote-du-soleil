@@ -3,8 +3,11 @@
 <script>
   $(document).ready(function() {
     $('.dropdown-toggle').click(function(e) {
-      e.preventDefault();
       $(this).children().toggleClass('active');
+      console.log("hello");
+    });
+    $('.burger-button').click(function(e) {
+      $('.menu-mobile').toggleClass('active');
       console.log("hello");
     });
   });
@@ -35,7 +38,7 @@
         <ul class="dropdown-menu">
           <li><a href="#">Plage privée</a></li>
           <li><a href="#">Evènements</a></li>
-          <li><a href="#">Activités touristiques</a></li>
+          <li><a href="{{ path('app_activities') }}">Activités touristiques</a></li>
         </ul>
         </span>
         </div>
@@ -43,5 +46,15 @@
     <a href="#" class="book" id="desktop-mobile">
       Réservez <i class="fa-regular fa-calendar-check"></i>
     </a>
+    <div class="nav-menu-mobile">
+    <img src="{{ asset("images/burger_icon.svg") }}" class="burger-button" alt="burger-menu"/>
+<div class="menu-mobile">
+<ul>
+ <li class="">Restaurant</li>
+  <li class="">Nos actus</li>
+   <li class="">Services</li>
+</ul>
+</div>
+     </div>
   </nav>
 </header>

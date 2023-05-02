@@ -76,6 +76,29 @@ nav .dropdown {
   padding: 0 20px;
 }
 
+.nav-menu-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.menu-mobile.active {
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 2%;
+  background-color: rgba(0, 0, 0, 0.632);
+  width: 180px;
+}
+
+.burger-button {
+  max-width: 32px;
+  margin: auto;
+}
+
 .hero-section {
   min-height: 100vh;
   position: relative;
