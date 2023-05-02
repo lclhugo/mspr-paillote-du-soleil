@@ -53,26 +53,44 @@ nav {
   flex-direction: column;
 }
   .menu-mobile {
-    display: none;
+   display: none;
 }
   .menu-mobile.active {
    display: block;
    position: absolute;
    top: 70px;
-   right: 2%;
-   background-color:rgba(0, 0, 0, 0.632);
-   width: 180px;
+   right: 0%;
+/*    background-color:rgba(0, 0, 0, 0.632); */
+   width: 50%;
+   background-color: variables.$bg-sand;
+   z-index: 4;
+   color: black;
 }
   .burger-button {
     max-width: 32px;
     margin: auto;
   }
-.menu-1 {
-  font-size: 24px;
+  .closing-x {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    
+  }
+  span:hover {
+    cursor: pointer;
+  }
+  
+.menu-titre {
+  padding: 2vh;
 }
-.menu-2 {
-  font-size: 20px;
+.menu-sous-titre {
+  font-size: 26px;
   text-indent: 10%;
+  padding: 0.5vh;
+  
+}
+li:hover {
+  cursor: pointer;
 }
 
 .hero-section {
