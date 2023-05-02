@@ -36,10 +36,14 @@ nav {
   .dropdown-menu.active {
     display: block;
     position: absolute;
-    top: 70px;
+    top: 92px;
     background-color:rgba(0, 0, 0, 0.632);
     width: 180px;
+    li {
+      padding: 20px;
+    }
   }
+    
   .nav-menu {
     display: flex;
 
@@ -58,7 +62,7 @@ nav {
   .menu-mobile.active {
    display: block;
    position: absolute;
-   top: 70px;
+   top: 92px;
    right: 0%;
 /*    background-color:rgba(0, 0, 0, 0.632); */
    width: 50%;
@@ -74,6 +78,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     padding: 10px;
+    font-size: 50px;
     
   }
   span:hover {
