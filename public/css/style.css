@@ -339,4 +339,20 @@ p.container-activities-description {
   margin-top: 10px;
 }
 
+#margin-left-none {
+  margin-left: 0px;
+}
+
+#logo-contact {
+  width: 300px;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  #logo-contact {
+    width: 150px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
