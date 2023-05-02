@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Evenements {% endblock %}
+
+{% block body %}
+
+    <div class="main-container events-container">
+
+        <div class="events">
+            <h2>Nos évènements</h2>
+            <div class="bloc">
+                <img src=" {{ asset('images/évènement.jpeg  ') }}" alt="concert">
+                <p class="intro">
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam aspernatur at atque consequatur cumque cupiditate ducimus ea eius, expedita facilis impedit laudantium maxime minima non odio pariatur possimus quidem repudiandae saepe, sit soluta temporibus veniam vitae voluptate voluptatibus voluptatum. Aliquid animi aperiam consectetur corporis cupiditate, distinctio eaque eligendi harum laudantium libero minus neque officia perspiciatis quaerat quam quisquam quod reiciendis repellendus sapiente sed sit soluta unde! Ducimus ex ipsum molestias quaerat repellat. Accusamus, iusto maiores nemo nihil quae tenetur vero. Doloremque nisi odio officia tenetur. Odio quis recusandae tempore?</p>
+            </div>
+        </div>
+
+        <div class="events">
+            <h3> Des concerts </h3>
+            <div class="bloc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quam rem repellat reprehenderit ut voluptate voluptates. Ad aliquid amet aspernatur at deleniti dolor ducimus ea earum ex facilis odit perspiciatis placeat provident rem sapiente sed, soluta sunt vitae voluptas voluptatibus! Dicta dolorem dolorum explicabo. Ad aliquam aliquid animi autem commodi culpa cum cumque dolores doloribus facilis in incidunt ipsum labore minima, nesciunt nostrum nulla odio porro qui quis sit tenetur vero voluptates! Accusamus dolor eius exercitationem ipsa totam voluptas. Adipisci dignissimos error explicabo maiores nam? Aliquid dolorem, optio! Ex, iusto?</p>
+                <img src=" {{ asset('images/concert.jpeg') }}" alt="concert">
+            </div>
+        </div>
+
+        <div class="events">
+            <h3> Evènements à venir </h3>
+            <div class="bloc">
+                <img src=" {{ asset('images/concert2.jpeg') }}" alt="concert">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad adipisci animi aperiam at aut culpa cumque dicta dolorem ducimus error ex facere harum itaque modi natus, obcaecati provident quos ratione reiciendis saepe sequi temporibus tenetur, totam ullam ut veritatis voluptatum. Debitis doloribus facere fugit id officia ratione! Adipisci blanditiis dolore doloremque, earum eligendi sint suscipit. Aliquid, corporis cum deserunt doloribus est eveniet, id, laudantium libero maxime neque perspiciatis possimus ratione reiciendis repellat unde vero voluptates! Alias aliquid aperiam architecto beatae, dolores eum ex fugiat iste labore libero non temporibus.</p>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
