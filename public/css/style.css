@@ -538,4 +538,65 @@ body {
   margin: 0.5rem 0;
 }
 
+#contact_name {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 10px;
+  border: solid;
+  border-width: 2px;
+  border-color: #225560;
+  border-radius: 4px;
+}
+
+#contact_email {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 10px;
+  border: solid;
+  border-width: 2px;
+  border-color: #225560;
+  border-radius: 4px;
+}
+
+#contact_subject {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 10px;
+  border: solid;
+  border-width: 2px;
+  border-color: #225560;
+  border-radius: 4px;
+}
+
+#contact_message {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 10px;
+  border: solid;
+  border-width: 2px;
+  border-color: #225560;
+  border-radius: 4px;
+}
+
+#contact_submit {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#margin-left-none {
+  margin-left: 0px;
+}
+
+#logo-contact {
+  width: 300px;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  #logo-contact {
+    width: 150px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
