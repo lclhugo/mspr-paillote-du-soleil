@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Activités {% endblock %}
+
+{% block body %}
+    <div class="main-container">
+    <h1>Nos activités</h1>
+    <p class="intro">
+        lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
+        lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
+        lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
+    <div class="container">
+        <section class="presentation">
+            <article class="left-content">
+                <img
+                        src="{{ asset('images/jet-ski.jpeg') }}"
+                        alt="photo d'un jet-ski'"
+                />
+            </article>
+            <article class="right-content">
+                <h3 class="presentation-title">Jet-ski</h3>
+                <br/>
+                <p>
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga eos ullam distinctio?
+                     Ab totam, consectetur quo neque, 
+                    recusandae deleniti, minus eaque in asperiores mollitia quia dolores iure quas quis expedita.
+                </p>
+                <br/>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga eos ullam distinctio?
+                     Ab totam, consectetur quo neque, 
+                    recusandae deleniti, minus eaque in asperiores mollitia quia dolores iure quas quis expedita.
+                </p>
+            </article>
+        </section>
+        <section class="presentation second">
+            <article class="left-content">
+                <img src="{{ asset('images/pétanque.jpeg') }}" alt="photo pétanque"/>
+            </article>
+            <article class="right-content">
+                <h3 class="presentation-title">Pétanque</h3>
+                <br/>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab esse maiores
+                    sint quas repellat nobis perspiciatis molestiae inventore quisquam
+                    praesentium.
+                </p>
+                <br/>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+                    ratione labore obcaecati quod repellendus officiis libero quis
+                    dignissimos optio illo fugit quae nulla temporibus. Omnis voluptatum
+                    optio ipsum eos, voluptatibus cupiditate veniam maxime officiis! Fuga
+                    quos eligendi itaque optio quod!
+                </p>
+            </article>
+        </section>
+        <section class="presentation">
+            <article class="left-content">
+                <img src="{{ asset('images/snorkeling.jpg') }}" alt="photo snorkeling"/>
+            </article>
+            <article class="right-content">
+                <h3 class="presentation-title">Snorkeling</h3>
+                <br/>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In cumque
+                    praesentium omnis ad nam eius.
+                </p>
+                <br/>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                    placeat doloribus illo facilis officiis. Magni eos aspernatur
+                    asperiores. Ut quod fugit maxime incidunt quos molestiae voluptas
+                    similique! Possimus, excepturi repellat!
+                </p>
+            </article>
+        </section>
+{% endblock %}

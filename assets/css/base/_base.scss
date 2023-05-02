@@ -1,4 +1,30 @@
-h1 {
-  color:red;
-  background-color: black
+@use "../base/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: variables.$helvetica-font;
+}
+
+body {
+  background-color: variables.$bg-sand;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-container {
+  padding-top: 22%;
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    padding-top: 10%;
+  }
 }

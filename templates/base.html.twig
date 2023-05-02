@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="{{ asset('images/favicon.ico') }}">
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    </head>
-    <body>
-        {% include 'partials/navbar.html.twig' %}
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon" href="{{ asset('images/favicon.ico') }}"/>
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
 
-        {% block body %}{% endblock %}
 
-        {% include 'partials/footer.html.twig' %}
+    {% include 'partials/navbar.html.twig' %}
+    <main>
+    {% block body %}{% endblock %}
+    </main>
+    {% include 'partials/footer.html.twig' %}
 
     <script src="{{ asset('js/script.js') }}"></script>
-    </body>
+</body>
 </html>
