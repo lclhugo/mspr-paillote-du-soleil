@@ -104,15 +104,22 @@ nav .dropdown {
   top: 92px;
   right: 0%;
   /*    background-color:rgba(0, 0, 0, 0.632); */
-  width: 50%;
+  width: 90%;
   background-color: #F0E2D5;
   z-index: 4;
   color: black;
+}
+.menu-mobile.active h2, .menu-mobile.active li {
+  font-family: "Miracle", sans-serif;
 }
 
 .burger-button {
   max-width: 32px;
   margin: auto;
+}
+
+.burger-button:hover {
+  cursor: pointer;
 }
 
 .closing-x {

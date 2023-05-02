@@ -29,6 +29,13 @@
 
   $('.closing-x').click(()=> {
     $('.menu-mobile').toggleClass('active');
+     if ($('.menu-mobile').hasClass('active')) {
+    // Définir la position relative lorsque le menu est ouvert
+    $('.hero-text').css('position', 'relative');
+  } else {
+    // Réappliquer la position initiale lorsque le menu est fermé
+    $('.hero-text').css('position', heroTextInitialPosition);
+  }
     });
   });
 </script>
