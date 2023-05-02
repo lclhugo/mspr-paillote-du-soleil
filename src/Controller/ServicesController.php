@@ -22,6 +22,13 @@ class ServicesController extends AbstractController
             'controller_name' => 'ServicesController',
         ]);
     }
+    #[Route('/services/privateBeach', name: 'app_privateBeach')]
+    public function privateBeach(): Response
+    {
+        return $this->render('services/privateBeach.html.twig', [
+            'controller_name' => 'ServicesController',
+        ]);
+    }
 
     #[Route('/services/events', name: 'app_events')]
     public function events(): Response
