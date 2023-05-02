@@ -337,11 +337,41 @@ p.container-activities-description {
   color: white !important;
   width: fit-content;
   padding: 0.5rem 1rem;
+  cursor: pointer;
   transition: background-color 300ms ease-in-out;
 }
 
-.cta-btn:hover {
+.btn_crud:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.btn_crud:hover {
   background-color: #819f6f;
+}
+
+.article {
+  text-align: center;
+}
+.article .detailed-article-img {
+  width: 80%;
+  height: 200px;
+  margin: 0 auto;
+}
+.article .detailed-article-img img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article p {
+  text-align: justify;
+  margin: 1rem auto;
+  width: 80%;
+}
+.article .article-bottom {
+  text-align: left;
+  width: 80%;
+  margin: 1rem auto;
 }
 
 /*# sourceMappingURL=style.css.map */

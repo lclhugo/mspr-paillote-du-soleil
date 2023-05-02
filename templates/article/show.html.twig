@@ -1,42 +1,37 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} {% block title %}Article{% endblock %} {% block
+body %}
+<div class="main-container">
+  <article class="article">
+    <h1>{{ article.title }}</h1>
+    <br />
+    {% if (article.image) %}
+    <div class="detailed-article-img">
+      <img src="{{ article.image }}" alt="{{ article.title }}" />
+    </div>
+    {% else %}
+    <div class="detailed-article-img">
+      <img
+        src="{{ asset('images/paillote.webp') }}"
+        alt="{{ article.title }}"
+      />
+    </div>
+    {% endif %}
+    <p>
+      {{ article.content | nl2br }}
+    </p>
+    <div class="article-bottom">
+      <a href="{{ path('app_article_index') }}" class="btn_crud"
+        >Retour aux articles</a
+      ><br />
 
-{% block title %}Article{% endblock %}
+      <a
+        href="{{ path('app_article_edit', { id: article.id }) }}"
+        class="btn_crud"
+        >Modifier</a
+      >
 
-{% block body %}
-    <h1>Article</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ article.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ article.title }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ article.content }}</td>
-            </tr>
-            <tr>
-                <th>CreatedAt</th>
-                <td>{{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>UpdatedAt</th>
-                <td>{{ article.updatedAt ? article.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ article.image }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_article_index') }}">back to list</a>
-
-    <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
-
-    {{ include('article/_delete_form.html.twig') }}
+      {{ include("article/_delete_form.html.twig") }}
+    </div>
+  </article>
+</div>
 {% endblock %}
