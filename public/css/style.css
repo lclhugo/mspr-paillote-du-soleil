@@ -23,15 +23,22 @@ body {
   background-color: #F0E2D5;
 }
 
-a, a:visited, a:hover {
+a,
+a:visited,
+a:hover {
   text-decoration: none;
   color: inherit;
 }
 
 .main-container {
-  padding-top: 10%;
+  padding-top: 22%;
 }
 
+@media screen and (min-width: 768px) {
+  .main-container {
+    padding-top: 10%;
+  }
+}
 nav {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.632);
@@ -223,15 +230,7 @@ nav ul a:hover {
   font-size: 1.5rem;
 }
 
-.before-footer {
-  width: 100%;
-  height: 3rem;
-  background: rgb(240, 226, 213);
-  background: linear-gradient(180deg, rgb(240, 226, 213) 0%, rgb(199, 192, 182) 50%, #819f6f 100%);
-}
-
 footer {
-  display: flex;
   background-color: #819f6f;
   color: #225560;
   padding: 1rem 2rem;
@@ -344,6 +343,111 @@ body {
     border-radius: 10px;
     padding: 30px 0;
   }
+}
+
+.cards {
+  display: flex !important;
+  margin-top: 0.5rem !important;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.cards .article__card {
+  position: relative;
+  max-width: 400px;
+}
+.cards .article__card .article__card-img {
+  max-width: 400px;
+}
+.cards .article__card .article__card-img img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  object-fit: cover;
+}
+.cards .article__card .card__title {
+  padding: 1rem 2rem;
+  position: absolute;
+  bottom: 16.4%;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(20, 19, 19, 0.781);
+  color: white;
+}
+
+.margin-bottom {
+  margin: 1rem 0;
+}
+
+.btn_crud {
+  font-family: "Miracle", sans-serif;
+  display: inline-block;
+  font-weight: 800;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: #225560;
+  color: white !important;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out;
+}
+
+.btn_crud:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.btn_crud:hover {
+  background-color: #819f6f;
+}
+
+.article {
+  text-align: center;
+}
+.article .detailed-article-img {
+  width: 80%;
+  height: 200px;
+  margin: 0 auto;
+}
+.article .detailed-article-img img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article p {
+  text-align: justify;
+  margin: 1rem auto;
+  width: 80%;
+}
+.article .article-bottom {
+  text-align: left;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.edit-article {
+  width: 50%;
+  margin: 0 auto 1rem;
+}
+.edit-article h1 {
+  text-align: center;
+}
+.edit-article #article_title,
+.edit-article #article_content,
+.edit-article #article_image {
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+.edit-article #contact_submit {
+  width: 100%;
+  margin-top: 10px;
+}
+.edit-article .mb {
+  margin: 0.5rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
