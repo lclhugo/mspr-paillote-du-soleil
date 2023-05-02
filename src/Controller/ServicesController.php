@@ -23,4 +23,11 @@ class ServicesController extends AbstractController
         ]);
     }
 
+    #[Route('/services/events', name: 'app_events')]
+    public function events(): Response
+    {
+        return $this->render('services/events.html.twig', [
+            'controller_name' => 'ServicesController',
+        ]);
+    }
 }
