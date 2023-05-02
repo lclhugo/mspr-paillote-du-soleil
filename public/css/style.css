@@ -73,7 +73,12 @@ nav .dropdown-menu.active li {
   padding: 20px;
 }
 nav .nav-menu {
-  display: flex;
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  nav .nav-menu {
+    display: flex;
+  }
 }
 nav .dropdown {
   padding: 0 20px;
