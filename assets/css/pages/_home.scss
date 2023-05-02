@@ -54,6 +54,9 @@ nav {
   }
   .dropdown {
     padding: 0 20px;
+    span {
+      font-family: variables.$miracle-font;
+    }
   }
 }
 .nav-menu-mobile {
@@ -68,15 +71,16 @@ nav {
 }
   .menu-mobile.active {
    display: block;
-   position: absolute;
    top: 92px;
    right: 0%;
 /*    background-color:rgba(0, 0, 0, 0.632); */
    width: 90%;
-   background-color: variables.$bg-sand;
+   background-color: variables.$bg-sand; 
+   opacity: 0.8;
    z-index: 4;
    color: black;
-   h2, li {
+   position: fixed;
+   h2, li, span {
     font-family: variables.$miracle-font;
    }
 }

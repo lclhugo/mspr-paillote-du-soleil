@@ -5,13 +5,6 @@
     const heroTextInitialPosition = $('.hero-text').css('position');
     $('.dropdown-toggle').click(function(e) {
       $(this).children().toggleClass('active');
-       $('.hero-text').css('position', 'relative');
-       if ($(this).children().hasClass('active')) {
-    $('.hero-text').css('position', 'relative');
-  } else {
-    $('.hero-text').css('position', 'absolute');
-  }
-      console.log("hello");
     });
   
     
