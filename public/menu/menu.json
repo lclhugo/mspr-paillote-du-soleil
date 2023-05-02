@@ -1,5 +1,4 @@
 {
-  "carte": {
     "entrees": [
       {
         "nom": "Le périgord en salade",
@@ -71,7 +70,7 @@
         { "nom": "Perrier", "prix": 3.6 },
         { "nom": "Naturelle", "prix": 3.9 }
       ],
-      "boissons chaudes": [
+      "boissons-chaudes": [
         { "nom": "café", "prix": 2.1 },
         { "nom": "chocolat chaud", "prix": 3.6 },
         { "nom": "thé", "prix": 3.6 }
@@ -104,4 +103,3 @@
       ]
     }
   }
-}

@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Menu{% endblock %}
+
+{% block body %}
+    <div class="main-container menu-container">
+        <h1>Menu</h1>
+
+        <div class="menu-card">
+            <h2>Entrées</h2>
+            <ul>
+                {% for entree in entrees %}
+                    <li>{{ entree.nom }} - <span class="price">{{ entree.prix }} €</span></li>
+                    <li class="ingredients">{{ entree.ingredients }}</li>
+                {% else %}
+                    <lfi>Aucune entrée</lfi>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="menu-card">
+            <h2>Plats</h2>
+            <ul>
+                {% for plat in plats %}
+                    <li>{{ plat.nom }} - <span class="price">{{ plat.prix }} € </span></li>
+                    <li class="ingredients">{{ plat.ingredients }}</li>
+                {% else %}
+                    <li>Aucun plat</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="menu-card">
+            <h2>Desserts</h2>
+            <ul>
+                {% for dessert in desserts %}
+                    <li>{{ dessert.nom }} - <span class="price">{{ dessert.prix }} € </span> </li>
+                    <li class="ingredients">{{ dessert.ingredients }}</li>
+                {% else %}
+                    <li>Aucun dessert</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div>
+            <h2>Boissons</h2>
+            <div class="drinks">
+
+                <div class="menu-card">
+                    <h3>Eaux</h3>
+                    <ul>
+                        {% for eau in eaux %}
+                            <li>{{ eau.nom }} - <span class="price">{{ eau.prix }} €</span> </li>
+                        {% else %}
+                            <li>Aucune eau</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="menu-card">
+                    <h3>Alcools</h3>
+                    <ul>
+                        {% for alcool in alcools %}
+                            <li>{{ alcool.nom }}</li>
+                            <li class="ingredients">{{ alcool.ingredients }}</li>
+                        {% else %}
+                            <li>Aucun alcool</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="menu-card">
+                    <h3>Boissons chaudes</h3>
+                    <ul>
+                        {% for boissonChaude in boissonsChaudes %}
+                            <li>{{ boissonChaude.nom }} - <span class="price">{{ boissonChaude.prix }} € </span></li>
+                        {% else %}
+                            <li>Aucune boisson</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}
