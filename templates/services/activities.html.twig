@@ -1,38 +1,29 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="{{ asset('images/favicon.ico') }}">
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    </head>
-    <body>
-        {% include 'partials/navbar.html.twig' %}
-        
-        {% block body %}
-        <h1>Our activities</h1>
-        <p class="intro">
+{% extends 'base.html.twig' %}
+
+{% block title %} Activités {% endblock %}
+
+{% block body %}
+    <div class="main-container">
+    <h1>Our activities</h1>
+    <p class="intro">
         lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
         lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
         lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
-        <div class="container">
-        <div class="container-activities">
+    <div class="container">
+    <div class="container-activities">
         <img class="container-activities-jet" src="{{ asset('images/jet-ski.jpeg') }}" alt="jet" title="jet"></img>
         <p class="container-activities-description">
-        lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
-        lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis</p>
-        <img class="container-activities-pétanque" src="{{ asset('images/pétanque.jpeg') }}" alt="pétanque" title="pétanque"></img>
+            lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
+            lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis</p>
+        <img class="container-activities-pétanque" src="{{ asset('images/pétanque.jpeg') }}" alt="pétanque"
+             title="pétanque"></img>
         <p class="container-activities-description">
-        lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
-        lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis</p>
-        <img class="container-activities-snorkeling" src="{{ asset('images/snorkeling.jpg') }}" alt="snorkeling" title="snorkeling"></img>
+            lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
+            lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis</p>
+        <img class="container-activities-snorkeling" src="{{ asset('images/snorkeling.jpg') }}" alt="snorkeling"
+             title="snorkeling"></img>
         <p class="container-activities-description">
-        lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
-        lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis</p>
-        {% endblock %}
-
-        {% include 'partials/footer.html.twig' %}
-
-    <script src="{{ asset('js/script.js') }}"></script>
-    </body>
-</html>
+            lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis,
+            lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet, consectetur adipis</p>
+    </div>
+{% endblock %}
