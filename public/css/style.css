@@ -62,12 +62,100 @@ nav .logo img {
 nav a {
   font-family: "Miracle", sans-serif;
 }
-nav ul {
-  display: flex;
+nav ul.dropdown-menu {
+  display: none;
   gap: 1rem;
 }
-nav ul a:hover {
+nav ul.dropdown-menu a:hover {
   text-decoration: underline;
+}
+nav .dropdown-menu.active {
+  display: block;
+  position: absolute;
+  top: 92px;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.632);
+}
+nav .dropdown-menu.active li {
+  padding: 20px;
+}
+nav .nav-menu {
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  nav .nav-menu {
+    display: flex;
+  }
+}
+nav .dropdown {
+  padding: 0 20px;
+}
+nav .dropdown span {
+  font-family: "Miracle", sans-serif;
+}
+
+.nav-menu-mobile {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 500px) {
+  .nav-menu-mobile {
+    display: none;
+  }
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.menu-mobile.active {
+  display: block;
+  top: 92px;
+  right: 0%;
+  /*    background-color:rgba(0, 0, 0, 0.632); */
+  width: 90%;
+  background-color: #F0E2D5;
+  opacity: 0.8;
+  z-index: 4;
+  color: black;
+  position: fixed;
+}
+.menu-mobile.active h2, .menu-mobile.active li, .menu-mobile.active span {
+  font-family: "Miracle", sans-serif;
+}
+
+.burger-button {
+  max-width: 32px;
+  margin: auto;
+}
+
+.burger-button:hover {
+  cursor: pointer;
+}
+
+.closing-x {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  font-size: 50px;
+}
+
+span:hover {
+  cursor: pointer;
+}
+
+.menu-titre {
+  padding: 2vh;
+}
+
+.menu-sous-titre {
+  font-size: 26px;
+  text-indent: 10%;
+  padding: 0.5vh;
+}
+
+li:hover {
+  cursor: pointer;
 }
 
 .hero-section {
