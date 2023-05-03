@@ -74,6 +74,10 @@ body {
   border-radius: 5px;
 }
 
+.blog-page {
+  text-align: center;
+}
+
 .cards {
   display: flex !important;
   margin-top: 0.5rem !important;
@@ -84,20 +88,23 @@ body {
 }
 .cards .article__card {
   position: relative;
-  max-width: 400px;
 }
 .cards .article__card .article__card-img {
-  max-width: 400px;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin-bottom: 0.5rem;
 }
 .cards .article__card .article__card-img img {
   border-radius: 10px 10px 0 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .cards .article__card .card__title {
   padding: 1rem 2rem;
   position: absolute;
-  bottom: 16.4%;
+  bottom: 0;
   width: 100%;
   overflow: hidden;
   background-color: rgba(20, 19, 19, 0.781);
@@ -109,6 +116,7 @@ body {
 }
 
 .btn_crud {
+  margin-top: 0.5rem;
   font-family: "Miracle", sans-serif;
   display: inline-block;
   font-weight: 800;
