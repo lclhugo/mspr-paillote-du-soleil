@@ -660,4 +660,19 @@ footer .fa-brands:hover {
   }
 }
 
+.services-page {
+  display: flex;
+  flex-direction: column !important;
+  margin: 0 2rem !important;
+}
+.services-page .card:first-of-type {
+  margin-top: 7rem;
+}
+.services-page .card:last-of-type {
+  margin-bottom: 1rem;
+}
+.services-page .card .blur {
+  bottom: 0.4rem !important;
+}
+
 /*# sourceMappingURL=style.css.map */
