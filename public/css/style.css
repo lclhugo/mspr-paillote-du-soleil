@@ -124,7 +124,7 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     padding: 30px 0;
-=======
+  }
 @media screen and (min-width: 768px) {
   .main-container {
     padding-top: 10%;
@@ -443,7 +443,6 @@ footer .fa-brands:hover {
 }
 
 .menu-container h2, .menu-container h3 {
-=======
 
 .left-content {
   height: 500px;
@@ -509,7 +508,7 @@ footer .fa-brands:hover {
   padding-bottom: 25px;
   padding-top: 10px;
 }
-
+}
 @media screen and (max-width: 650px) {
   #logo-contact {
     width: 150px;
