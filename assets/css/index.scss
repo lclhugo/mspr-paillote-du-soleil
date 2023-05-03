@@ -1,9 +1,10 @@
 @use "base/variables";
 @use "base/base";
+@use "base/navbar";
 
 @use "pages/activities";
+@use "pages/article";
 @use "pages/contact";
 @use "pages/events";
 @use "pages/home";
 @use "pages/menu";
-@use "pages/article";
