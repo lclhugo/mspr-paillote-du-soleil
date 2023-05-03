@@ -1,5 +1,9 @@
 @use "../base/variables";
 
+.blog-page {
+  text-align: center;
+}
+
 .cards {
   display: flex !important;
   margin-top: 0.5rem !important;
@@ -9,12 +13,15 @@
   margin-bottom: 1rem;
   .article__card {
     position: relative;
-    max-width: 400px;
     .article__card-img {
-      max-width: 400px;
+      width: 400px;
+      height: 400px;
+      position: relative;
+      margin-bottom: 0.5rem;
       img {
         border-radius: 10px 10px 0 0;
         width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     }
@@ -22,7 +29,7 @@
     .card__title {
       padding: 1rem 2rem;
       position: absolute;
-      bottom: 16.4%;
+      bottom: 0;
       width: 100%;
       overflow: hidden;
       background-color: rgba(20, 19, 19, 0.781);
@@ -36,6 +43,7 @@
 }
 
 .btn_crud {
+  margin-top: 0.5rem;
   font-family: variables.$miracle-font;
   display: inline-block;
   font-weight: 800;
@@ -81,6 +89,10 @@
     width: 80%;
     margin: 1rem auto;
   }
+}
+
+.backHome {
+  margin-top: 0.5rem;
 }
 
 .edit-article {

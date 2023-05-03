@@ -8,11 +8,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\ORM\EntityManagerInterface;
 
 class ContactController extends AbstractController
 {
     #[Route('/contact', name: 'app_contact')]
-    public function index(Request $request): Response
+    public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
         $contact = new Contact();
         $form = $this->createForm(ContactForm::class, $contact, [
@@ -20,7 +21,16 @@ class ContactController extends AbstractController
             'method' => 'POST',
         ]);
 
-        $this->addFlash('success', 'Votre message a bien été envoyé');
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($contact);
+            $entityManager->flush();
+
+            $this->addFlash('success', 'Votre message a bien été envoyé');
+
+            return $this->redirectToRoute('app_contact');
+        }
 
         return $this->render('contact/index.html.twig', [
             'controller_name' => 'ContactController',
@@ -28,3 +38,4 @@ class ContactController extends AbstractController
         ]);
     }
 }
+

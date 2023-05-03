@@ -36,7 +36,7 @@
                     chacun. La Paillote Du Soleil a conservé l’esprit d’une plage familiale.
                 </p>
                 <br/>
-                <a href="#" class="cta-btn">Découvrez notre restaurant</a>
+                <a href="{{ path('app_menu') }}" class="cta-btn">Découvrez notre restaurant</a>
             </article>
         </section>
         <section class="presentation second">
@@ -63,7 +63,7 @@
                     quos eligendi itaque optio quod!
                 </p>
                 <br/>
-                <a href="#" class="cta-btn">Découvrez nos services</a>
+                <a href="{{ path('app_services') }}" class="cta-btn">Découvrez nos services</a>
             </article>
         </section>
         <section class="presentation">
@@ -91,36 +91,6 @@
                 <a href="{{ path('app_article_index') }}" class="cta-btn">Découvrez nos actualités</a>
             </article>
         </section>
-        {#
-        <section class="proposals">
-          <div class="card">
-            <a href="#">
-              <div class="blur"></div>
-              <img src="{{ asset('images/proposal__food.jpg') }}" alt="Restaurant" />
-              <p class="card__text">Restaurant</p>
-            </a>
-          </div>
-          <div class="card">
-            <a href="#">
-              <div class="blur"></div>
-              <img
-                src="{{ asset('images/proposal__restaurant.jpg') }}"
-                alt="Evènements"
-              />
-              <p class="card__text">Évènements</p>
-            </a>
-          </div>
-          <div class="card">
-            <a href="#">
-              <div class="blur"></div>
-              <img
-                src="{{ asset('images/proposal__beach.jpg') }}"
-                alt="Plage privée"
-              />
-              <p class="card__text">Plage privée</p>
-            </a>
-          </div>
-        #}
         </section>
         <div class="before-footer"></div>
 {% endblock %}
