@@ -24,6 +24,8 @@ body %}
         >Retour aux articles</a
       ><br />
 
+      {% if (app.user) %}
+
       <a
         href="{{ path('app_article_edit', { id: article.id }) }}"
         class="btn_crud"
@@ -31,6 +33,7 @@ body %}
       >
 
       {{ include("article/_delete_form.html.twig") }}
+      {% endif %}
     </div>
   </article>
 </div>

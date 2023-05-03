@@ -1,30 +1,31 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} {% block title %}Réservation{% endblock %} {%
+block body %}
+<div class="main-container form-container">
+  <section class="presentation" id="margin-left-none">
+    <article class="left-content">
+      <div id="logo-contact">
+        <img
+          src="{{ asset('images/logo-contact.png') }}"
+          alt="photo de la Paillote Du Soleil"
+        />
+      </div>
+    </article>
+    <article class="right-content">
+      <h3 class="presentation-title">Réservation</h3>
+      <br />
 
-{% block title %}Réservation{% endblock %}
+      {{ include("reservation/_form.html.twig") }}
 
-{% block body %}
-    <div class="main-container form-container">
-        <section class="presentation" id="margin-left-none">
-            <article class="left-content">
-                <div id="logo-contact">
-                    <img src="{{ asset('images/logo-contact.png') }}" alt="photo de la Paillote Du Soleil"/>
-                </div>
-            </article>
-            <article class="right-content">
-                <h3 class="presentation-title">Réservation</h3>
-                <br/>
-
-                {{ include('reservation/_form.html.twig') }}
-
-                {% for type, messages in app.session.flashbag.all() %}
-                    {% for message in messages %}
-                        <div>
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endfor %}
-                <a href="{{ path('app_home')}}" class="cta-btn right">Retour à l'accueil</a>
-            </article>
-        </section>
-    </div>
+      {% for type, messages in app.session.flashbag.all() %} {% for message in
+      messages %}
+      <div>
+        {{ message }}
+      </div>
+      {% endfor %} {% endfor %}
+      <a href="{{ path('app_home') }}" class="cta-btn right backHome"
+        >Retour à l'accueil</a
+      >
+    </article>
+  </section>
+</div>
 {% endblock %}
