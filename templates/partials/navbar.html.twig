@@ -1,89 +1,100 @@
 <header>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function() {
-    const heroTextInitialPosition = $('.hero-text').css('position');
-    $('.dropdown-toggle').click(function(e) {
-      $(this).children().toggleClass('active');
-    });
-  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const heroTextInitialPosition = $(".hero-text").css("position");
     
-    $('.burger-button').click(function(e) {
-      $('.menu-mobile').toggleClass('active');
-      console.log("hello");
-        if ($('.menu-mobile').hasClass('active')) {
-    // Définir la position relative lorsque le menu est ouvert
-    $('.hero-text').css('position', 'relative');
-  } else {
-    // Réappliquer la position initiale lorsque le menu est fermé
-    $('.hero-text').css('position', heroTextInitialPosition);
-  }
-  });
-
-  $('.closing-x').click(()=> {
-    $('.menu-mobile').toggleClass('active');
-     if ($('.menu-mobile').hasClass('active')) {
-    // Définir la position relative lorsque le menu est ouvert
-    $('.hero-text').css('position', 'relative');
-  } else {
-    // Réappliquer la position initiale lorsque le menu est fermé
-    $('.hero-text').css('position', heroTextInitialPosition);
-  }
+    $(".dropdown-toggle").click(function (e) {
+      $(".dropdown-toggle").not(this).children().removeClass("active"); // Supprime la classe "active" de tous les éléments avec la classe ".dropdown-toggle", sauf l'élément actuellement cliqué
+  $(this).children().toggleClass("active");
     });
-  });
-</script>
+
+      $(".burger-button").click(function (e) {
+        $(".menu-mobile").toggleClass("active");
+        if ($(".menu-mobile").hasClass("active")) {
+          // Définir la position relative lorsque le menu est ouvert
+          $(".hero-text").css("position", "relative");
+        } else {
+          // Réappliquer la position initiale lorsque le menu est fermé
+          $(".hero-text").css("position", heroTextInitialPosition);
+        }
+      });
+
+      $(".closing-x").click(() => {
+        $(".menu-mobile").toggleClass("active");
+        if ($(".menu-mobile").hasClass("active")) {
+          // Définir la position relative lorsque le menu est ouvert
+          $(".hero-text").css("position", "relative");
+        } else {
+          // Réappliquer la position initiale lorsque le menu est fermé
+          $(".hero-text").css("position", heroTextInitialPosition);
+        }
+      });
+    });
+  </script>
   <nav>
+    {#
     <div class="logo">
       <img src="{{ asset("images/paillotte.svg") }}" alt="Logo"/>
     </div>
-     <div class="nav-menu">
+    #}
+   <div class="nav-menu">
+    <div class="dropdown">
+      <span href="#" class="dropdown-toggle" id="dropdown-restaurant">Restaurant
+      <ul class="dropdown-menu">
+        <li><a href="{{ path('app_menu')}}">Carte </a></li>
+        <li><a href="{{ path('app_traiteur')}}">Traiteur</a></li>
+      </ul>
+      </span> 
+      </div>
       <div class="dropdown">
-        <span href="#" class="dropdown-toggle" id="dropdown-restaurant">Restaurant
-        <ul class="dropdown-menu">
-          <li><a href="#">Carte </a></li>
-          <li><a href="#">Traiteur</a></li>
-        </ul>
-        </span>
-        </div>
-        <div class="dropdown">
-        <span href="#" class="dropdown-toggle">Nos actualités
-        <ul class="dropdown-menu">
-          <li><a href="{{ path('app_article_index')}} ">Blog</a></li>
-          <li><a href="#">Presse partenaire</a></li>
-        </ul>
-        </span>
-        </div>
-        <div class="dropdown">
-        <span href="#" class="dropdown-toggle">Services
-        <ul class="dropdown-menu">
-          <li><a href="{{ path('app_privateBeach') }}">Plage privée</a></li>
-          <li><a href="{{ path('app_events') }}">Evènements</a></li>
-          <li><a href="{{ path('app_activities') }}">Activités touristiques</a></li>
-        </ul>
-        </span>
-        </div>
-        </div>
-    <a href="#" class="book" id="desktop-mobile">
-      Réservez <i class="fa-regular fa-calendar-check"></i>
-    </a>
+      <span href="#" class="dropdown-toggle">Nos actualités
+      <ul class="dropdown-menu">
+        <li><a href="{{ path('app_article_index')}} ">Blog</a></li>
+        <li><a href="{{ path('app_presse')}} ">Presse partenaire</a></li>
+      </ul>
+      </span>
+      </div>
+      <div class="dropdown">
+      <span href="#" class="dropdown-toggle">Services
+      <ul class="dropdown-menu">
+        <li><a href="{{ path('app_privateBeach') }}">Plage privée</a></li>
+        <li><a href="{{ path('app_events') }}">Evènements</a></li>
+        <li><a href="{{ path('app_activities') }}">Activités touristiques</a></li>
+      </ul>
+      </span>
+       
+       </div>
+       <div class="dropdown">
+       <span class="dropdown-toggle"><a  href="{{ path('app_contact') }}"> Contact</a></span>
+      </div>
+      </div>
+  <a href="#{# {{ path('app_reservation_new')}} #}" class="book" id="desktop-mobile">
+    Réservez <i class="fa-regular fa-calendar-check"></i>
+  </a>
+
+ {#  Début du menu mobile :  #}
+
     <div class="nav-menu-mobile">
-    <i class="fa-solid fa-bars burger-button"></i>
-<div class="menu-mobile">
-<div class="closing-x-div"> <span class="closing-x"> X </span></div>
-<ul>
+      <i class="fa-solid fa-bars burger-button"></i>
+      <div class="menu-mobile">
+        <i class="fa-solid fa-x closing-x"></i>
+       <ul>
 
  <h2 class="menu-titre">Restaurant</h2>
- <li class="menu-sous-titre">Carte</li>
- <li class="menu-sous-titre">Traiteur</li>
+ <li class="menu-sous-titre"><a href="{{ path('app_menu')}}">Carte</a></li>
+ <li class="menu-sous-titre"><a href="{{ path('app_traiteur')}}">Traiteur</a></li>
   <h2 class="menu-titre">Nos actus</h2>
-  <li class="menu-sous-titre">Blog</li>
- <li class="menu-sous-titre">Presse - partenaire</li>
+  <li class="menu-sous-titre"><a href="{{ path('app_article_index')}}">Blog</a></li>
+ <li class="menu-sous-titre"><a href="{{ path('app_presse')}}">Presse - partenaire</a></li>
    <h2 class="menu-titre">Services</h2>
-   <li class="menu-sous-titre">Plage Privée</li>
- <li class="menu-sous-titre">Evènements</li>
- <li class="menu-sous-titre">Activités touristiques</li>
+   <li class="menu-sous-titre"><a href="{{ path('app_privateBeach') }}">Plage Privée</a></li>
+ <li class="menu-sous-titre"><a href="{{ path('app_events') }}">Evènements</a></li>
+ <li class="menu-sous-titre"><a href="{{ path('app_activities') }}">Activités touristiques</a></li>
+ <h2 class="menu-titre">Contact</h2>
+ <li class="menu-sous-titre"><a href="{{ path('app_contact') }}">Formulaire de contact</a></li>
 </ul>
-</div>
-     </div>
+      </div>
+    </div>
   </nav>
 </header>
