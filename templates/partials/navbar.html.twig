@@ -48,7 +48,7 @@
         <div class="dropdown">
         <span href="#" class="dropdown-toggle">Nos actualités
         <ul class="dropdown-menu">
-          <li><a href="#">Blog</a></li>
+          <li><a href="{{ path('app_article_index')}} ">Blog</a></li>
           <li><a href="#">Presse partenaire</a></li>
         </ul>
         </span>
@@ -56,8 +56,8 @@
         <div class="dropdown">
         <span href="#" class="dropdown-toggle">Services
         <ul class="dropdown-menu">
-          <li><a href="#">Plage privée</a></li>
-          <li><a href="#">Evènements</a></li>
+          <li><a href="{{ path('app_privateBeach') }}">Plage privée</a></li>
+          <li><a href="{{ path('app_events') }}">Evènements</a></li>
           <li><a href="{{ path('app_activities') }}">Activités touristiques</a></li>
         </ul>
         </span>

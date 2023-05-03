@@ -1,24 +1,11 @@
-@font-face {
-  font-family: "Miracle";
-  src: url("../fonts/Miracle.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Helvetica";
-  src: url("../fonts/Helvetica_55.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none;
-  font-family: "Helvetica", sans-serif;
-}
+/* Error: expected "{".
+ *   ,
+ * 8 | @use'pages/article';
+ *   |                    ^
+ *   '
+ *   assets\css\index.scss 8:20  root stylesheet */
 
+<<<<<<< HEAD
 body {
   background-color: #F0E2D5;
 }
@@ -525,133 +512,15 @@ footer .fa-brands:hover {
 .menu-container .ingredients {
   font-style: italic;
   opacity: 0.7;
+=======
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+>>>>>>> f3145192bb78d283446ce95b14cf005d20043d50
   margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: expected \"{\".\a   \2577 \a 8 \2502  @use'pages/article';\d\a   \2502                     ^\a   \2575 \a   assets\\css\\index.scss 8:20  root stylesheet";
 }
-.menu-container .price {
-  font-weight: bold;
-}
-.menu-container h2 {
-  margin-bottom: 0.5em;
-}
-@media (min-width: 768px) {
-  .menu-container {
-    width: 80%;
-  }
-  .menu-container .drinks {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2em;
-  }
-  .menu-container .drinks .menu-card {
-    width: 30%;
-    margin-top: 0;
-  }
-}
-.cards {
-  display: flex !important;
-  margin-top: 0.5rem !important;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-.cards .article__card {
-  position: relative;
-  max-width: 400px;
-}
-.cards .article__card .article__card-img {
-  max-width: 400px;
-}
-.cards .article__card .article__card-img img {
-  border-radius: 10px 10px 0 0;
-  width: 100%;
-  object-fit: cover;
-}
-.cards .article__card .card__title {
-  padding: 1rem 2rem;
-  position: absolute;
-  bottom: 16.4%;
-  width: 100%;
-  overflow: hidden;
-  background-color: rgba(20, 19, 19, 0.781);
-  color: white;
-}
-
-.margin-bottom {
-  margin: 1rem 0;
-}
-
-.btn_crud {
-  font-family: "Miracle", sans-serif;
-  display: inline-block;
-  font-weight: 800;
-  border: 1px solid gray;
-  border-radius: 10px;
-  background-color: #225560;
-  color: white !important;
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: background-color 300ms ease-in-out;
-}
-
-.btn_crud:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.btn_crud:hover {
-  background-color: #819f6f;
-}
-
-.article {
-  text-align: center;
-}
-.article .detailed-article-img {
-  width: 80%;
-  height: 200px;
-  margin: 0 auto;
-}
-.article .detailed-article-img img {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.article p {
-  text-align: justify;
-  margin: 1rem auto;
-  width: 80%;
-}
-.article .article-bottom {
-  text-align: left;
-  width: 80%;
-  margin: 1rem auto;
-}
-
-.edit-article {
-  width: 50%;
-  margin: 0 auto 1rem;
-}
-.edit-article h1 {
-  text-align: center;
-}
-.edit-article #article_title,
-.edit-article #article_content,
-.edit-article #article_image {
-  width: 100%;
-  background-color: white;
-  margin-top: 10px;
-  border-radius: 4px;
-  margin: 0.5rem 0;
-}
-.edit-article #contact_submit {
-  width: 100%;
-  margin-top: 10px;
-}
-.edit-article .mb {
-  margin: 0.5rem 0;
-}
-
-/*# sourceMappingURL=style.css.map */
