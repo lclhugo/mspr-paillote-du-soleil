@@ -452,9 +452,8 @@ li:hover {
   margin-left: 0.5rem;
   padding-left: 1rem;
 }
-.presentation .right-content button {
-  text-decoration: underline;
-  font-weight: 700;
+.presentation .right-content a {
+  font-family: "Miracle", sans-serif;
 }
 .presentation .right-content h3 {
   font-family: "Miracle", sans-serif;
