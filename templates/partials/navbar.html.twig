@@ -62,11 +62,18 @@
         <li><a href="{{ path('app_activities') }}">Activités touristiques</a></li>
       </ul>
       </span>
+       
+       </div>
+       <div class="dropdown">
+       <span class="dropdown-toggle"><a  href="{{ path('app_contact') }}"> Contact</a></span>
       </div>
       </div>
   <a href="#{# {{ path('app_reservation_new')}} #}" class="book" id="desktop-mobile">
     Réservez <i class="fa-regular fa-calendar-check"></i>
   </a>
+
+ {#  Début du menu mobile :  #}
+
     <div class="nav-menu-mobile">
       <i class="fa-solid fa-bars burger-button"></i>
       <div class="menu-mobile">
@@ -83,6 +90,8 @@
    <li class="menu-sous-titre"><a href="{{ path('app_privateBeach') }}">Plage Privée</a></li>
  <li class="menu-sous-titre"><a href="{{ path('app_events') }}">Evènements</a></li>
  <li class="menu-sous-titre"><a href="{{ path('app_activities') }}">Activités touristiques</a></li>
+ <h2 class="menu-titre">Contact</h2>
+ <li class="menu-sous-titre"><a href="{{ path('app_contact') }}">Formulaire de contact</a></li>
 </ul>
       </div>
     </div>
