@@ -178,6 +178,10 @@ li:hover {
     max-width: 50%;
     margin-left: 0.5rem;
     padding-left: 1rem;
+    button {
+      text-decoration: underline;
+      font-weight: 700;
+    }
 
     h3 {
       font-family: variables.$miracle-font;
