@@ -1,0 +1,28 @@
+@use "../base/variables";
+
+h1 {
+    font-family: variables.$miracle-font;
+}
+p {
+    font-family: variables.$helvetica-font;
+}
+body {
+    background-color: #F0E2D5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+    
+    .left-content {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+
+      }
+      height: 500px;
+    }
+  

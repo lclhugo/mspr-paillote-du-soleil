@@ -1,0 +1,9 @@
+@use "../base/variables";
+
+.dropdown.active {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+}

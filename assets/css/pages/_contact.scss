@@ -1,0 +1,31 @@
+#contact_form_name,
+#contact_form_email,
+#contact_form_subject,
+#contact_form_message
+{
+    width: 100%;
+    background-color: transparent;
+    margin-top: 10px;
+    border: solid 2px #225560;
+    border-radius: 4px;
+}
+
+#contact_form_submit {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#margin-left-none {
+    margin-left: 0px;
+}
+#logo-contact {
+    width: 300px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 650px) {
+    #logo-contact {
+        width: 150px;
+    }
+}
