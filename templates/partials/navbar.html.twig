@@ -40,8 +40,8 @@
       <div class="dropdown">
         <span href="#" class="dropdown-toggle" id="dropdown-restaurant">Restaurant
         <ul class="dropdown-menu">
-          <li><a href="#">Carte </a></li>
-          <li><a href="#">Traiteur</a></li>
+          <li><a href="{{ path('app_menu')}}">Carte </a></li>
+          <li><a href="{{ path('app_traiteur')}}">Traiteur</a></li>
         </ul>
         </span>
         </div>
@@ -49,7 +49,7 @@
         <span href="#" class="dropdown-toggle">Nos actualités
         <ul class="dropdown-menu">
           <li><a href="{{ path('app_article_index')}} ">Blog</a></li>
-          <li><a href="#">Presse partenaire</a></li>
+          <li><a href="{{ path('app_presse')}} ">Presse partenaire</a></li>
         </ul>
         </span>
         </div>
@@ -73,15 +73,15 @@
 <ul>
 
  <h2 class="menu-titre">Restaurant</h2>
- <li class="menu-sous-titre">Carte</li>
- <li class="menu-sous-titre">Traiteur</li>
+ <li class="menu-sous-titre"><a href="{{ path('app_menu')}}">Carte</a></li>
+ <li class="menu-sous-titre"><a href="{{ path('app_traiteur')}}">Traiteur</a></li>
   <h2 class="menu-titre">Nos actus</h2>
-  <li class="menu-sous-titre">Blog</li>
- <li class="menu-sous-titre">Presse - partenaire</li>
+  <li class="menu-sous-titre"><a href="{{ path('app_article_index')}}">Blog</a></li>
+ <li class="menu-sous-titre"><a href="{{ path('app_presse')}}">Presse - partenaire</a></li>
    <h2 class="menu-titre">Services</h2>
-   <li class="menu-sous-titre">Plage Privée</li>
- <li class="menu-sous-titre">Evènements</li>
- <li class="menu-sous-titre">Activités touristiques</li>
+   <li class="menu-sous-titre"><a href="{{ path('app_privateBeach') }}">Plage Privée</a></li>
+ <li class="menu-sous-titre"><a href="{{ path('app_events') }}">Evènements</a></li>
+ <li class="menu-sous-titre"><a href="{{ path('app_activities') }}">Activités touristiques</a></li>
 </ul>
 </div>
      </div>
