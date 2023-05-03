@@ -1,0 +1,21 @@
+@use "../base/variables";
+
+.services-page {
+    display: flex;
+    flex-direction: column!important;
+    margin: 0 2rem!important;
+
+    .card:first-of-type {
+margin-top: 7rem;
+
+    }
+    .card:last-of-type{
+        margin-bottom: 1rem;
+    }
+    .card {
+        .blur {
+
+            bottom: .4rem!important;
+        }
+    }
+}

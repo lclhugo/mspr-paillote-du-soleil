@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Presse et partenariat {% endblock %}
+
+{% block body %}
+    <div class="main-container">
+    <div class="container">
+        <section class="presentation">
+            <article class="left-content">
+                <img
+                        src="{{ asset('images/presse.jpeg') }}"
+                        alt="photo presse'"
+                />
+            </article>
+            <article class="right-content">
+                <h3 class="presentation-title">Espace presse et partenariat</h3>
+                <br/>
+                <p>
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga eos ullam distinctio?
+                     Ab totam, consectetur quo neque, 
+                    recusandae deleniti, minus eaque in asperiores mollitia quia dolores iure quas quis expedita.
+                </p>
+                 <br/>
+                 
+                <button class="cta-btn"> <a  href="{{ path('app_contact')}}"> Nous contacter </a> </button>
+            </article>
+            
+        </section>
+    </div>
+    </p>
+    </div>
+{% endblock %}

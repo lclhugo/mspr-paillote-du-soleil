@@ -40,24 +40,23 @@ nav {
   .dropdown-menu.active {
     display: block;
     position: absolute;
-    top: 92px;
+    top: 100%;
+    // right: 10.5%;
     z-index: 4;
-    background-color:rgba(0, 0, 0, 0.632); 
+    background-color: rgba(0, 0, 0, 0.632);
     li {
       padding: 20px;
     }
   }
-    
+
   .nav-menu {
     display: none;
+    gap: 1.5rem;
     @media screen and (min-width: 500px) {
       display: flex;
-      
     }
-
   }
   .dropdown {
-    padding: 0 20px;
     span {
       font-family: variables.$miracle-font;
     }
@@ -66,45 +65,52 @@ nav {
 .nav-menu-mobile {
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 500px){
+  @media screen and (min-width: 500px) {
     display: none;
   }
 }
-  .menu-mobile {
-   display: none;
+.menu-mobile {
+  display: none;
 }
-  .menu-mobile.active {
-   display: block;
-   top: 92px;
-   right: 0%;
-/*    background-color:rgba(0, 0, 0, 0.632); */
-   width: 90%;
-   background-color: variables.$bg-sand; 
-   opacity: 0.8;
-   z-index: 4;
-   color: black;
-   position: fixed;
-   h2, li, span {
+.menu-mobile.active {
+  display: block;
+  top: 3.65rem;
+  right: 0%;
+  /*    background-color:rgba(0, 0, 0, 0.632); */
+  width: 90%;
+  background-color: variables.$bg-sand;
+  opacity: 0.8;
+  z-index: 4;
+  color: black;
+  position: fixed;
+
+  h2,
+  li,
+  span {
     font-family: variables.$miracle-font;
-   }
+  }
 }
-  .burger-button {
-    max-width: 32px;
-    margin: auto;
-  }
-  .burger-button:hover {
-    cursor: pointer;
-  }
-  .closing-x {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    font-size: 50px;
-  }
-  span:hover {
-    cursor: pointer;
-  }
-  
+.burger-button {
+  max-width: 32px;
+  margin: auto;
+}
+.burger-button:hover {
+  cursor: pointer;
+}
+.closing-x {
+  position: absolute;
+  cursor: pointer;
+  left: 87.5%;
+  top: 0.5rem;
+  // display: flex;
+  // justify-content: flex-end;
+  padding: 10px;
+  font-size: 20px;
+}
+span:hover {
+  cursor: pointer;
+}
+
 .menu-titre {
   padding: 2vh;
 }
@@ -112,7 +118,10 @@ nav {
   font-size: 26px;
   text-indent: 10%;
   padding: 0.5vh;
-  
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
 }
 li:hover {
   cursor: pointer;
@@ -136,7 +145,7 @@ li:hover {
       padding: 1rem;
       color: white;
       z-index: 3;
-      top: 50%;
+      top: 70%;
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: rgba(0, 0, 0, 0.639);
@@ -182,6 +191,9 @@ li:hover {
     max-width: 50%;
     margin-left: 0.5rem;
     padding-left: 1rem;
+    a {
+      font-family: variables.$miracle-font;
+    }
 
     h3 {
       font-family: variables.$miracle-font;
@@ -320,8 +332,16 @@ footer {
   background-color: variables.$light-green;
   color: variables.$blue-green;
   padding: 1rem 2rem;
-  div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 600;
+
+  div .h3 {
     text-align: center;
+    margin-bottom: 1rem;
   }
 
   h3 {
