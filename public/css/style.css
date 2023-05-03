@@ -30,6 +30,10 @@ a:hover {
   color: inherit;
 }
 
+main {
+  min-height: 90vh;
+}
+
 .main-container {
   padding-top: 22%;
 }
@@ -187,15 +191,26 @@ body {
   margin: 0.5rem 0;
 }
 
-#contact_form_name,
-#contact_form_email,
-#contact_form_subject,
-#contact_form_message {
-  width: 100%;
+select, input, textarea {
   background-color: transparent;
   margin-top: 10px;
   border: solid 2px #225560;
   border-radius: 4px;
+}
+
+select {
+  width: 12%;
+  height: 2em;
+}
+
+textarea {
+  width: 100%;
+  height: 10em;
+}
+
+label {
+  font-size: 1em;
+  color: #225560;
 }
 
 #contact_form_submit {
@@ -203,14 +218,14 @@ body {
   margin-top: 10px;
 }
 
-#margin-left-none {
-  margin-left: 0px;
-}
-
 #logo-contact {
   width: 300px;
   padding-bottom: 25px;
   padding-top: 10px;
+}
+
+.form-container .right-content {
+  width: 100%;
 }
 
 @media screen and (max-width: 650px) {
@@ -293,6 +308,9 @@ nav {
   align-items: center;
   color: white;
   font-size: 1.3rem;
+}
+nav .cta-btn:hover {
+  cursor: pointer;
 }
 nav .logo {
   max-width: 30px;
@@ -489,6 +507,7 @@ li:hover {
 }
 .presentation .cta-btn:hover {
   background-color: #819f6f;
+  cursor: pointer;
 }
 
 .second .left-content {
@@ -639,6 +658,21 @@ footer .fa-brands:hover {
     width: 30%;
     margin-top: 0;
   }
+}
+
+.services-page {
+  display: flex;
+  flex-direction: column !important;
+  margin: 0 2rem !important;
+}
+.services-page .card:first-of-type {
+  margin-top: 7rem;
+}
+.services-page .card:last-of-type {
+  margin-bottom: 1rem;
+}
+.services-page .card .blur {
+  bottom: 0.4rem !important;
 }
 
 /*# sourceMappingURL=style.css.map */
