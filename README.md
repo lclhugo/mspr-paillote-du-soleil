@@ -1,6 +1,6 @@
 # Festival
 
-Symfony Project done in school
+Projet Symfony fait en cours
 
 # commandes:
 
